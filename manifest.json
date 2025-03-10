@@ -1,11 +1,11 @@
 {
-	"id": "vault-stats",
-	"name": "Vault Stats",
+	"id": "vaulter",
+	"name": "Vaulter",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
-}
+	"description": "Displays vault statistics like note count and allows toggling display in the status bar.",
+	"author": "Alessandro Chitarrini",
+	"authorUrl": "https://github.com/chitvs",
+	"fundingUrl": "https://github.com/chitvs/vault-stats",
+	"isDesktopOnly": true
+  }  
