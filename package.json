@@ -1,6 +1,6 @@
 {
-	"name": "1.8.9",
-	"version": "1.0.1",
+	"name": "vaulter",
+	"version": "1.0.0",
 	"description": "Displays vault statistics like note count and allows toggling display in the status bar",
 	"main": "main.js",
 	"scripts": {

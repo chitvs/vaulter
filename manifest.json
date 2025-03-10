@@ -1,7 +1,7 @@
 {
 	"id": "vaulter",
 	"name": "Vaulter",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"minAppVersion": "1.8.9",
 	"description": "Displays vault statistics like note count and allows toggling display in the status bar.",
 	"author": "Alessandro Chitarrini",
