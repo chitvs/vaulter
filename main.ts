@@ -2,20 +2,19 @@ import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Set
 
 // Remember to rename these classes and interfaces!
 
-interface HelloWorldPluginSettings {
+interface VaultStatsPluginSettings {
 	mySetting: string;
 }
 
-const DEFAULT_SETTINGS: HelloWorldPluginSettings = {
+const DEFAULT_SETTINGS: VaultStatsPluginSettings = {
 	mySetting: 'default'
 }
 
-export default class HelloWorldPlugin extends Plugin {
-	settings: HelloWorldPluginSettings;
+export default class VaultStatsPlugin extends Plugin {
+	settings: VaultStatsPluginSettings;
 
 	async onload() {
 		await this.loadSettings();
-		console.log('loading plugin')
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
@@ -80,7 +79,6 @@ export default class HelloWorldPlugin extends Plugin {
 	}
 
 	onunload() {
-		console.log('unloading plugin')
 	}
 
 	async loadSettings() {
@@ -109,9 +107,9 @@ class SampleModal extends Modal {
 }
 
 class SampleSettingTab extends PluginSettingTab {
-	plugin: HelloWorldPlugin;
+	plugin: VaultStatsPlugin;
 
-	constructor(app: App, plugin: HelloWorldPlugin) {
+	constructor(app: App, plugin: VaultStatsPlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
