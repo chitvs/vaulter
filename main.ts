@@ -15,7 +15,7 @@ export default class HelloWorldPlugin extends Plugin {
 
 	async onload() {
 		await this.loadSettings();
-
+		console.log('loading plugin')
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
@@ -80,7 +80,7 @@ export default class HelloWorldPlugin extends Plugin {
 	}
 
 	onunload() {
-
+		console.log('unloading plugin')
 	}
 
 	async loadSettings() {
