@@ -12,7 +12,7 @@
 ## Installation
 
 1. Download the latest release from the [GitHub Releases page](https://github.com/chitvs/vaulter/releases).
-2. Copy the `main.js`, `styles.css`, and `manifest.json` files to your vault's `.obsidian/plugins/vaulter/` directory.
+2. Copy the `main.js`, and `manifest.json` files to your vault's `.obsidian/plugins/vaulter/` directory.
 3. Enable the plugin in Obsidian by going to **Settings > Community Plugins** and turning on **Vaulter**.
 
 ## Usage
@@ -57,20 +57,6 @@ You can configure the plugin through the Settings panel:
    ```
 
 5. Reload Obsidian to load the latest changes to the plugin.
-
-### Release process
-
-To create a new release:
-
-1. Update the version number in `manifest.json`.
-2. Run the following to increment the version:
-
-   ```bash
-   npm version patch
-   ```
-
-3. Create a new GitHub release with the new version number.
-4. Upload the updated `main.js`, `styles.css`, and `manifest.json` to the release.
 
 ### Contributing
 
