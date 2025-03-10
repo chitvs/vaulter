@@ -1,94 +1,85 @@
-# Obsidian Sample Plugin
+# Vaulter Plugin for Obsidian
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+**Vaulter** is an Obsidian plugin that displays vault statistics, such as the total number of notes in your vault. It offers an option to toggle the display of these statistics in the status bar for easy access.
 
-This project uses TypeScript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in TypeScript Definition format, which contains TSDoc comments describing what it does.
+## Features
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+- Note count: Shows the total number of Markdown notes in your vault.
+- Status bar integration: Toggle the visibility of the note count in the status bar.
+- Real-time updates: The note count updates dynamically when files are created, renamed, or deleted in the vault.
+- Customizable settings: Configure whether or not to display the note count in the status bar via the plugin's settings.
 
-## First time developing plugins?
+## Installation
 
-Quick starting guide for new plugin devs:
+1. Download the latest release from the [GitHub Releases page](https://github.com/chitvs/vaulter/releases).
+2. Copy the `main.js`, `styles.css`, and `manifest.json` files to your vault's `.obsidian/plugins/vaulter/` directory.
+3. Enable the plugin in Obsidian by going to **Settings > Community Plugins** and turning on **Vaulter**.
 
-- Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+## Usage
 
-## Releasing new releases
+Once installed, you can:
 
-- Update your `manifest.json` with your new version number, such as `1.0.1`, and the minimum Obsidian version required for your latest release.
-- Update your `versions.json` file with `"new-plugin-version": "minimum-obsidian-version"` so older versions of Obsidian can download an older version of your plugin that's compatible.
-- Create new GitHub release using your new version number as the "Tag version". Use the exact version number, don't include a prefix `v`. See here for an example: https://github.com/obsidianmd/obsidian-sample-plugin/releases
-- Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
-- Publish the release.
+- See the total number of notes displayed in the status bar.
+- Toggle the visibility of the note count in the status bar via the plugin settings (Settings > Vaulter).
+- Use the command "Show Vault Stats" to display the note count in a notice popup.
 
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
-> The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
+> **Note**: This plugin is intended for use with Obsidian Desktop. Mobile support is not currently available.
 
-## Adding your plugin to the community plugin list
+### Plugin settings
 
-- Check the [plugin guidelines](https://docs.obsidian.md/Plugins/Releasing/Plugin+guidelines).
-- Publish an initial version.
-- Make sure you have a `README.md` file in the root of your repo.
-- Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
+You can configure the plugin through the Settings panel:
 
-## How to use
+1. **Show note count in status bar**: Toggle whether the note count is displayed in the status bar.
+   - If enabled, the status bar will show a message like `This vault has X notes`.
+   - If disabled, the status bar message will be hidden.
 
-- Clone this repo.
-- Make sure your NodeJS is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
-- `npm run dev` to start compilation in watch mode.
+## Development
 
-## Manually installing the plugin
+### Prerequisites
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
+- **Node.js**: Ensure you have at least Node.js v16 or later installed.
+- **Obsidian API**: The plugin uses the latest Obsidian API, so be sure to have the required dependencies.
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
+### Local development setup
 
-## Funding URL
+1. Clone this repository to your local machine.
+2. Navigate to the plugin folder (`.obsidian/plugins/vaulter/`).
+3. Install dependencies by running:
 
-You can include funding URLs where people who use your plugin can financially support it.
+   ```bash
+   npm install
+   ```
 
-The simple way is to set the `fundingUrl` field to your link in your `manifest.json` file:
+4. Start development mode with:
 
-```json
-{
-    "fundingUrl": "https://buymeacoffee.com"
-}
-```
+   ```bash
+   npm run dev
+   ```
 
-If you have multiple URLs, you can also do:
+5. Reload Obsidian to load the latest changes to the plugin.
 
-```json
-{
-    "fundingUrl": {
-        "Buy Me a Coffee": "https://buymeacoffee.com",
-        "GitHub Sponsor": "https://github.com/sponsors",
-        "Patreon": "https://www.patreon.com/"
-    }
-}
-```
+### Release process
 
-## API Documentation
+To create a new release:
 
-See https://github.com/obsidianmd/obsidian-api
+1. Update the version number in `manifest.json`.
+2. Run the following to increment the version:
+
+   ```bash
+   npm version patch
+   ```
+
+3. Create a new GitHub release with the new version number.
+4. Upload the updated `main.js`, `styles.css`, and `manifest.json` to the release.
+
+### Contributing
+
+Feel free to open an issue or a pull request if you'd like to contribute to the plugin. Contributions are welcome!
+
+## License
+
+This plugin is licensed under the MIT License. See the `LICENSE` file for more details.
+
+## API documentation
+
+For more information on the Obsidian Plugin API, check out the [official documentation](https://github.com/obsidianmd/obsidian-api).
