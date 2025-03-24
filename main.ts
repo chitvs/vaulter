@@ -26,7 +26,7 @@ export default class VaulterPlugin extends Plugin {
       id: 'show-vault-stats',
       name: 'Show vault stats',
       callback: () => {
-        new Notice(`Total Notes: ${this.getNoteCount()}`);
+        new Notice(`Total notes: ${this.getNoteCount()}`);
       }
     });
 
@@ -34,7 +34,7 @@ export default class VaulterPlugin extends Plugin {
   }
 
   getNoteCount(): number {
-    return this.app.vault.getFiles().filter(file => file.extension === "md").length;
+    return this.app.vault.getMarkdownFiles().length
   }
 
   updateVaulter() {
