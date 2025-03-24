@@ -24,7 +24,7 @@ export default class VaulterPlugin extends Plugin {
 
     this.addCommand({
       id: 'show-vault-stats',
-      name: 'Show Vault Stats',
+      name: 'Show vault stats',
       callback: () => {
         new Notice(`Total Notes: ${this.getNoteCount()}`);
       }
