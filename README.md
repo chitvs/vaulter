@@ -4,10 +4,10 @@
 
 ## Features
 
-- Note count: Shows the total number of Markdown notes in your vault.
-- Status bar integration: Toggle the visibility of the note count in the status bar.
-- Real-time updates: The note count updates dynamically when files are created, renamed, or deleted in the vault.
-- Customizable settings: Configure whether or not to display the note count in the status bar via the plugin's settings.
+- Note count: shows the total number of Markdown notes in your vault.
+- Status bar integration: toggle the visibility of the note count in the status bar.
+- Real-time updates: the note count updates dynamically when files are created, renamed, or deleted in the vault.
+- Customizable settings: configure whether or not to display the note count in the status bar via the plugin's settings.
 
 ## Installation
 
@@ -21,15 +21,16 @@ Once installed, you can:
 
 - See the total number of notes displayed in the status bar.
 - Toggle the visibility of the note count in the status bar via the plugin settings (Settings > Vaulter).
-- Use the command "Show Vault Stats" to display the note count in a notice popup.
+- Use the command "Show vault stats" to display the note count in a notice popup.
 
-> **Note**: This plugin is intended for use with Obsidian Desktop. Mobile support is not currently available.
+> [!NOTE]
+> This plugin is intended for use with Obsidian Desktop. Mobile support is not currently available.
 
 ### Plugin settings
 
 You can configure the plugin through the Settings panel:
 
-1. **Show note count in status bar**: Toggle whether the note count is displayed in the status bar.
+1. **Show note count in status bar**: toggle whether the note count is displayed in the status bar.
    - If enabled, the status bar will show a message like `This vault has X notes`.
    - If disabled, the status bar message will be hidden.
 
@@ -37,8 +38,8 @@ You can configure the plugin through the Settings panel:
 
 ### Prerequisites
 
-- **Node.js**: Ensure you have at least Node.js v16 or later installed.
-- **Obsidian API**: The plugin uses the latest Obsidian API, so be sure to have the required dependencies.
+- **Node.js**: ensure you have at least Node.js v16 or later installed.
+- **Obsidian API**: the plugin uses the latest Obsidian API, so be sure to have the required dependencies.
 
 ### Local development setup
 
