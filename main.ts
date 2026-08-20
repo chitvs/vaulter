@@ -9,8 +9,8 @@ const DEFAULT_SETTINGS: VaulterPluginSettings = {
 };
 
 export default class VaulterPlugin extends Plugin {
-  settings: VaulterPluginSettings;
-  statusBarItemEl: HTMLElement;
+  settings!: VaulterPluginSettings;
+  statusBarItemEl!: HTMLElement;
 
   async onload() {
     await this.loadSettings();
