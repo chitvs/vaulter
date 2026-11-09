@@ -1,13 +1,13 @@
 {
 	"name": "vaulter",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Displays vault statistics like note count and allows toggling display in the status bar",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json",
-        "lint": "eslint ."
+		"lint": "eslint ."
 	},
 	"keywords": [
 		"obsidian",
